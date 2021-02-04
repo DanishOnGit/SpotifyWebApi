@@ -3,23 +3,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
+   
 }
 :root{
     --pri-color:#1db954;
     --sec-color:#1ed760;
+    --hover--color:#15813b;
     --white:#ffff;
     --grey:#191414;
 }
-body{
-    background:linear-gradient(rgba(27, 2, 167, 0.2), rgba(21, 1, 134, 0.267)),url("joshua-fuller-ta7rN3NcWyM-unsplash.jpg") ;
+/* body{
+    background:linear-gradient(rgba(3, 3, 3, 0.8), rgba(1, 1, 2, 0.959)),url("joshua-fuller-ta7rN3NcWyM-unsplash.jpg") ;
     min-height: 100vh;
     background-position: center; 
     background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode: difference;
+    background-blend-mode:overlay;
+} */
+body{
+    background-color: var(--grey);
 }
-
+input,button{
+    outline: none;
+    border: none;
+}
+/* landing page */
 .heading{
     height: 25vh;
     text-align: center;
@@ -28,10 +37,82 @@ body{
     line-height: 25vh;
     color:var(--white);
 }
-.header_text{
-    width: 80vw;
+.green_text{
+    color: var(--pri-color);
+}
+header{
+    /* background-color: yellowgreen; */
+    margin-top: 3rem;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
     color: var(--white);
 }
+.getStarted{
+    background-color: var(--pri-color);
+    color:var(--white);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    margin-top: 2rem;
+    transition: 200ms ease;
+}
+.getStarted:hover{
+   background-color: var(--hover--color);
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+/* main search page */
+.input_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+}
+.input_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    color: var(--white);
+    padding: 0 2rem;
+}
+input{
+    padding: 0.5rem;
+    border-radius: 2rem;
+    width: 15rem;
+    margin: 0 0.5rem;
+}
+.input_div-btn{
+    color: var(--pri-color);
+    font-size: 2rem;
+    background-color: var(--grey);
+}
+.playlists{
+    width:15rem;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+.output-wrap{
+    position: relative;
+    right: 1rem;
+}
+.output_label{
+    margin: 0 2rem;
+    color: var(--white);
+}
+.output_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 
 
