@@ -81,26 +81,21 @@ label{
     color: var(--white);
     padding: 0 2rem;
 }
-input{
-    padding: 0.5rem;
-    border-radius: 2rem;
-    width: 15rem;
-    margin: 0 0.5rem;
-}
+
 .input_div-btn{
     color: var(--pri-color);
     font-size: 2rem;
     background-color: var(--grey);
 }
-.playlists{
+.playlists,.genre{
     width:15rem;
     border-radius: 2rem;
     padding: 0.5rem;
 }
-.output-wrap{
-    position: relative;
-    right: 1rem;
+.genre{
+    margin-left: 0.8rem;
 }
+
 .output_label{
     margin: 0 2rem;
     color: var(--white);
