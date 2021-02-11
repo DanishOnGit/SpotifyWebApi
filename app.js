@@ -81,8 +81,20 @@ const ApiResponseControl=(function(){
         const genres=await Apiresctrl._getGenre(token);
         console.log(genres);
         genres.forEach(element => {
-            console.log(element.name)
+            // console.log(element.name)
+            // const html=`<option value="${element.id}">${element.name}</option>`;
+            // genreSelect.innerHTML+=html
+            const option=document.createElement("option")
+            option.classList.add("genreOption");
+            console.log(option)
+            // console.log(document.getElementsByClassName("genreOption"))
+            // document.getElementsByClassName("genreOption")[0].innerHTML=element.name
+            option.value=element.id
+            genreSelect.appendChild(option)
+            
         });
+    
+        
         
     }
     loadGenres();
