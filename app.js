@@ -3,6 +3,7 @@ let playlistSelect=document.querySelector(".playlists");
 
 let id=myid;
 let key=token;
+
 const ApiResponseControl=(function(){
 
     const getToken=async()=>{
@@ -23,9 +24,8 @@ const ApiResponseControl=(function(){
        } catch(err){
            console.log(err)
        }
-       const data= response.json();
-       console.log(data)
-      
+       const data=await  response.json();
+    //    console.log(data.access_token)
        return  data.access_token
     
     } 
@@ -47,8 +47,8 @@ const ApiResponseControl=(function(){
         }
         
         const data=await result.json();
-        console.log(data);
-        console.log(data.categories.items)
+        // console.log(data);
+        // console.log(data.categories.items)
         return data.categories.items
     }
   
@@ -62,7 +62,41 @@ const ApiResponseControl=(function(){
         }
     }
 }) ();
-console.log(ApiResponseControl._getToken)
+
+
+//getting token
+// let tokenfunc=ApiResponseControl._getToken
+// tokenfunc();
+// console.log(ApiResponseControl)
+// console.log("wowow")
+//geting genres
+// let genrefunc=ApiResponseControl._getGenre
+// console.log(genrefunc(tokenValue))
+
+ const controllerFunc=(function(Apiresctrl){
+     console.log("controllerFunc running1");
+    const loadGenres=async()=>{
+        console.log("controllerFunc running2")
+        const token=await Apiresctrl._getToken();
+        const genres=await Apiresctrl._getGenre(token);
+        console.log(genres);
+        genres.forEach(element => {
+            console.log(element.name)
+        });
+        
+    }
+    return {
+        _loadGenres(){
+            return loadGenres();
+        }
+    }
+ })(ApiResponseControl);
+//  console.log((controllerFunc._loadGenres)());
+console.log(controllerFunc._loadGenres())
+ 
+
+
+
 
 
 
@@ -79,5 +113,5 @@ console.log(ApiResponseControl._getToken)
 //     const data=await result.json();
 //     return data.playlists.items
 // }
-// async function getTracks(token,)
+
 
