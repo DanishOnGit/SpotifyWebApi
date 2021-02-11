@@ -85,14 +85,15 @@ const ApiResponseControl=(function(){
         });
         
     }
-    return {
-        _loadGenres(){
-            return loadGenres();
-        }
-    }
+    loadGenres();
+    // return {
+    //     _loadGenres(){
+    //         return loadGenres();
+    //     }
+    // }
  })(ApiResponseControl);
 //  console.log((controllerFunc._loadGenres)());
-console.log(controllerFunc._loadGenres())
+// console.log(controllerFunc._loadGenres())
  
 
 
