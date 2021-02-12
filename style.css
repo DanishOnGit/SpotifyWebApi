@@ -17,8 +17,7 @@
 button,input{
     border: none;
     outline: none;
-    padding: ;
-    border-radius: ;
+    
 }
 /* body{
     background:linear-gradient(rgba(3, 3, 3, 0.8), rgba(1, 1, 2, 0.959)),url("joshua-fuller-ta7rN3NcWyM-unsplash.jpg") ;
@@ -102,7 +101,7 @@ label{
 .genre{
     margin-left: 0.8rem;
 }
-
+    
 .output_label{
     margin: 0 2rem;
     color: var(--white);
