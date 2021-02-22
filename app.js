@@ -1,8 +1,8 @@
-let genreSelect = document.querySelector(".genre");
-let playlistSelect = document.querySelector(".playlists");
+const genreSelect = document.querySelector(".genre");
+const playlistSelect = document.querySelector(".playlists");
 
-let id = myid;
-let key = token;
+const id = myid;
+const key = token;
 
 const ApiResponseControl = (function () {
   const getToken = async () => {
